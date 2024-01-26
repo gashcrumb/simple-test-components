@@ -1,0 +1,3 @@
+app:
+  title: 'Dummy App Config'
+  baseUrl: http://localhost:3000
