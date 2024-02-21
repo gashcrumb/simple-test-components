@@ -34,4 +34,4 @@ dynamicPlugins:
 
 Building the plugin should be a matter of running `yarn install` followed by `yarn run tsc`, `yarn run build` and then finally `yarn export-dynamic` to build the dynamic plugin.
 
-The most crude way to get this going in a Janus/RHDH instance is to create a directory under `dynamic-plugins-root` called `janus-idp.backstage-plugin-simple-test-components` and then copy this package's `package.json` file and `dist-scalprum` folder into it.
+The most crude way to get this going in a [Janus/RHDH instance](https://github.com/janus-idp/backstage-showcase) is to create a directory under `dynamic-plugins-root` called `janus-idp.backstage-plugin-simple-test-components` and then copy this package's `package.json` file and `dist-scalprum` folder into it.  Put the above configuration snippet in your `app-config.local.yaml` (create this if it doesn't exist, it should be in the root of the repo alongside `app-config.yaml` and run the showcase app with `yarn start`.  This configuration should introduce an "Administration" tab above the settings link which has two tabs where this plugin will be mounted.
