@@ -6,26 +6,22 @@ The most crude way to run the plugin within a Backstage application is by buildi
 
 Before proceeding, ensure you have set up the [backstage-showcase](https://github.com/janus-idp/backstage-showcase) application and followed the [getting started instructions](https://github.com/janus-idp/backstage-showcase/blob/main/showcase-docs/getting-started.md).
 
-#### Build Plugin
+## Build Plugin
 
 ```bash
 yarn install
 yarn tsc
 yarn build
+```
+
+## Copy Build Results to Host Application
+
+```bash
+export DYNAMIC_PLUGINS_ROOT=/path/to/backstage/showcase/dynamic-plugins-root
 yarn export-dynamic
 ```
 
-#### Copy Build Results to Host Application
-
-Navigate to the backstage-showcase repository directory and execute the following commands:
-
-```bash
-PLUGIN_DIR=path_to_plugin_repository # replace path_to_plugin_repository with the directory of the plugin
-mkdir -p dynamic-plugins-root/janus-idp.backstage-plugin-simple-test-components
-cp -r ${PLUGIN_DIR}/package.json ${PLUGIN_DIR}/dist-scalprum dynamic-plugins-root/janus-idp.backstage-plugin-simple-test-components
-```
-
-#### Configure dynamicPlugins
+## Configure dynamicPlugins
 
 Add the example configuration snippet below to your app-config.local.yaml.
 
@@ -83,13 +79,13 @@ dynamicPlugins:
                 - isKind: component
 ```
 
-#### Run the Showcase App
+## Run the Showcase App
 
 ```bash
 yarn start
 ```
 
-#### Verify the Plugin was Loaded Correctly
+## Verify the Plugin was Loaded Correctly
 
 - An "Administration" navigation item should appear above the settings link which has two tabs.
 - A green card with the text "System card text" should appear in the system Overview page.

@@ -30,6 +30,7 @@ node_modules/
 
 # Build output
 dist
+dist-dynamic
 dist-types
 dist-scalprum
 /plugins/*/dist-dynamic/*
