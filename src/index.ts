@@ -1,1 +1,1 @@
-export { simpleTestComponentsPlugin, SimpleTestComponentsPage } from './plugin';
+export * from './plugin';

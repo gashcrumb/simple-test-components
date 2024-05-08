@@ -1,5 +1,5 @@
 {
-  "name": "@janus-idp/backstage-plugin-simple-test-components",
+  "name": "backstage-plugin-simple-test-components",
   "version": "0.1.0",
   "main": "src/index.ts",
   "types": "src/index.ts",
@@ -55,11 +55,5 @@
   "files": [
     "dist",
     "dist-scalprum"
-  ],
-  "scalprum": {
-    "name": "janus-idp.backstage-plugin-simple-test-components",
-    "exposedModules": {
-      "PluginRoot": "./src/index.ts"
-    }
-  }
+  ]
 }
