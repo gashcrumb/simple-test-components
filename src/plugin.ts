@@ -25,21 +25,6 @@ export const isAvailableUsingContext = (
   return true;
 };
 
-export const isAvailableEventually = async (
-  _entity: Entity,
-  _context: { apis: ApiHolder }
-) => {
-  return new Promise(resolve => setTimeout(() => resolve(true), 60000));
-}
-
-export const isNotAvailableEventually = async (
-  _entity: Entity,
-  _context: { apis: ApiHolder }
-) => {
-  return new Promise(resolve => setTimeout(() => resolve(false), 60000));
-}
-
-
 export const SimpleTestComponentsPage = simpleTestComponentsPlugin.provide(
   createRoutableExtension({
     name: "SimpleTestComponentsPage",

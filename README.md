@@ -154,28 +154,6 @@ dynamicPlugins:
                 - isAvailableUsingContext
             props:
               text: 'Content Block Three (available using context)'
-        - mountPoint: entity.page.overview/cards
-          importName: SimpleTestComponentsPage
-          config:
-            layout:
-              gridColumn: "span 1"
-              gridRow: "span 1"
-            if:
-              allOf:
-                - isAvailableEventually
-            props:
-              text: 'Content Block Four (available eventually)'
-        - mountPoint: entity.page.overview/cards
-          importName: SimpleTestComponentsPage
-          config:
-            layout:
-              gridColumn: "span 1"
-              gridRow: "span 1"
-            if:
-              allOf:
-                - isNotAvailableEventually
-            props:
-              text: 'Content Block Five (Not available eventually)'
         - mountPoint: entity.page.external/cards
           importName: SimpleTestComponentsPage
           config:
