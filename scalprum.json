@@ -1,0 +1,6 @@
+{
+  "name": "backstage-plugin-simple-test-components-dynamic",
+  "exposedModules": {
+    "PluginRoot": "./src/index.ts"
+  }
+}

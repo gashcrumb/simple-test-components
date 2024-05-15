@@ -18,7 +18,7 @@
     "start": "backstage-cli package start",
     "build": "backstage-cli package build",
     "clean": "backstage-cli package clean",
-    "export-dynamic": "janus-cli package export-dynamic-plugin --clean --dev --dynamic-plugins-root $DYNAMIC_PLUGINS_ROOT --no-in-place",
+    "export-dynamic": "janus-cli package export-dynamic-plugin --clean --dev --dynamic-plugins-root $DYNAMIC_PLUGINS_ROOT --scalprum-config ./scalprum.json --no-in-place",
     "lint": "backstage-cli package lint",
     "prepack": "backstage-cli package prepack",
     "postpack": "backstage-cli package postpack",
