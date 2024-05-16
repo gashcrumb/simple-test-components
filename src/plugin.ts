@@ -1,5 +1,6 @@
 import {
   ApiHolder,
+  createComponentExtension,
   createPlugin,
   createRoutableExtension,
 } from "@backstage/core-plugin-api";
@@ -36,10 +37,20 @@ export const isAvailableUsingContext = (
 };
 
 export const SimpleTestComponentsPage = simpleTestComponentsPlugin.provide(
-  createRoutableExtension({
+  createComponentExtension({
     name: "SimpleTestComponentsPage",
+    component: {
+      lazy: () =>
+        import("./components/TestInfoCard").then((m) => m.TestInfoCard),
+    },
+  })
+);
+
+export const CustomSearchPage = simpleTestComponentsPlugin.provide(
+  createRoutableExtension({
+    name: "CustomSearchPage",
     component: () =>
-      import("./components/TestInfoCard").then((m) => m.TestInfoCard),
+      import("./components/CustomSearchPage").then((m) => m.CustomSearchPage),
     mountPoint: rootRouteRef,
   })
 );

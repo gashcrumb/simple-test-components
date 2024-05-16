@@ -81,7 +81,7 @@ dynamicPlugins:
 
 Here is another example configuration featuring some conditionals and customized tabs:
 
-```
+```yaml
 dynamicPlugins:
   frontend:
     backstage-plugin-simple-test-components:
@@ -161,6 +161,23 @@ dynamicPlugins:
               gridColumn: "1 / 1"
             props:
               text: 'Some Content on the Dependencies Page'
+```
+
+Some WIP stuff that requires support from the backstage-showcase app
+
+```yaml
+    backstage-plugin-simple-test-components:
+      dynamicRoutes:
+        - path: /test-route
+          importName: CustomSearchPage
+          menuItem:
+            text: Search2
+      mountPoints:
+        - mountPoint: custom.mount.point
+          importName: SimpleTestComponentsPage
+          config:
+            props:
+              text: 'Content Block in a custom mount point'
 ```
 
 ## Run the Showcase App
