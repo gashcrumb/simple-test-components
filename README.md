@@ -28,7 +28,7 @@ Add the example configuration snippet below to your app-config.local.yaml.
 ```yaml
 dynamicPlugins:
   frontend:
-    backstage-plugin-simple-test-components-dynamic:
+    backstage-plugin-simple-test-components:
       dynamicRoutes:
         - path: /admin/rbac
           importName: SimpleTestComponentsPage
@@ -81,10 +81,10 @@ dynamicPlugins:
 
 Here is another example configuration featuring some conditionals and customized tabs:
 
-```yaml
+```
 dynamicPlugins:
   frontend:
-    backstage-plugin-simple-test-components-dynamic:
+    backstage-plugin-simple-test-components:
       entityTabs:
         - path: /
           title: General
