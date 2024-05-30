@@ -7,12 +7,13 @@ import { useScalprum } from "@scalprum/react-core";
 
 function getMountPointData<T = any, T2 = any>({
   mountPoint,
-  api = { mountPoints: {} },
+  api = { dynamicRootConfig: { mountPoints: {} } },
 }: {
   mountPoint: string;
   api: any;
 }): { config: any; Component: T; staticJSXContent: T2 }[] {
-  const mountPointComponents = api.mountPoints?.[mountPoint] ?? [];
+  const mountPointComponents =
+    api.dynamicRootConfig?.mountPoints?.[mountPoint] ?? [];
   return mountPointComponents;
 }
 
@@ -40,7 +41,7 @@ export const CustomSearchPage = () => {
               return (
                 <ComponentWithIcon
                   {...config.props}
-                  title={'foo'}
+                  title={"foo"}
                   key={`search_results_${idx}`}
                   icon={<MenuIcon icon={config.props?.icon || ""} />}
                 />
