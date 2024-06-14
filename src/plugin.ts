@@ -18,6 +18,11 @@ import {
   simpleDoNothingValidation,
 } from "./components/SimpleTestField";
 
+import {
+  ValidateKebabCase,
+  validateKebabCaseValidation,
+} from "./components/ValidateKebabCase/ValidateKebabCase";
+
 export const simpleTestComponentsPlugin = createPlugin({
   id: "simple-test-components",
   routes: {
@@ -63,3 +68,11 @@ export const SimpleTestFieldExtension: FieldExtensionComponent<string, string> =
       validation: simpleDoNothingValidation,
     })
   );
+
+export const ValidateKebabCaseFieldExtension = scaffolderPlugin.provide(
+  createScaffolderFieldExtension({
+    name: "ValidateKebabCase",
+    component: ValidateKebabCase,
+    validation: validateKebabCaseValidation,
+  })
+);

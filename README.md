@@ -163,7 +163,7 @@ dynamicPlugins:
               text: 'Some Content on the Dependencies Page'
 ```
 
-Some WIP stuff that requires support from the backstage-showcase app
+Using a custom mount point on a page from this plugin
 
 ```yaml
     backstage-plugin-simple-test-components:
@@ -178,6 +178,18 @@ Some WIP stuff that requires support from the backstage-showcase app
           config:
             props:
               text: 'Content Block in a custom mount point'
+```
+
+Scaffolder field extension
+
+```yaml
+dynamicPlugins:
+  frontend:
+    backstage-plugin-simple-test-components:
+      scaffolderFieldExtensions:
+        - importName: ValidateKebabCaseFieldExtension
+        - importName: SimpleTestFieldExtension
+
 ```
 
 ## Run the Showcase App
