@@ -18,7 +18,7 @@
     "start": "backstage-cli package start",
     "build": "backstage-cli package build",
     "clean": "backstage-cli package clean",
-    "export-dynamic": "janus-cli package export-dynamic-plugin --clean --dev --dynamic-plugins-root $DYNAMIC_PLUGINS_ROOT --no-in-place",
+    "export-dynamic": "janus-cli package export-dynamic-plugin --clean",
     "lint": "backstage-cli package lint",
     "prepack": "backstage-cli package prepack",
     "postpack": "backstage-cli package postpack",
@@ -26,15 +26,15 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@backstage/core-components": "0.14.6",
-    "@backstage/core-plugin-api": "1.9.2",
-    "@backstage/plugin-catalog": "1.19.0",
-    "@backstage/plugin-scaffolder": "1.19.3",
-    "@backstage/plugin-scaffolder-react": "1.8.4",
-    "@backstage/theme": "^0.5.3",
-    "@mui/icons-material": "5.15.17",
-    "@mui/material": "5.15.17",
+    "@backstage/core-components": "0.15.1",
+    "@backstage/core-plugin-api": "1.10.0",
+    "@backstage/plugin-catalog": "1.24.0",
+    "@backstage/plugin-scaffolder": "1.26.2",
+    "@backstage/plugin-scaffolder-react": "1.13.2",
+    "@backstage/theme": "0.6.0",
     "@material-ui/lab": "^4.0.0-alpha.61",
+    "@mui/icons-material": "5.16.7",
+    "@mui/material": "5.16.7",
     "@scalprum/core": "0.7.0",
     "@scalprum/react-core": "0.7.1",
     "react": "^18.3.1",
@@ -42,7 +42,8 @@
     "react-router": "^6.23.0",
     "react-router-dom": "^6.23.0",
     "react-use": "^17.5.0",
-    "tss-react": "4.9.3"
+    "tss-react": "4.9.3",
+    "typescript": "5.6.2"
   },
   "peerDependencies": {
     "react": "^16.13.1 || ^17.0.0 || ^18.3.0"
@@ -52,7 +53,7 @@
     "@backstage/core-app-api": "1.12.4",
     "@backstage/dev-utils": "1.0.31",
     "@backstage/test-utils": "1.5.4",
-    "@janus-idp/cli": "1.8.6",
+    "@janus-idp/cli": "1.12.0",
     "@testing-library/jest-dom": "6.4.5",
     "@testing-library/react": "15.0.7",
     "@testing-library/user-event": "14.5.2",
@@ -60,6 +61,7 @@
   },
   "files": [
     "dist",
-    "dist-scalprum"
-  ]
+    "dist-dynamic"
+  ],
+  "packageManager": "yarn@3.8.6"
 }
