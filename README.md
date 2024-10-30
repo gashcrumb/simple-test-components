@@ -23,7 +23,7 @@ yarn export-dynamic
 
 ## Configure dynamicPlugins
 
-Add the example configuration snippet below to your app-config.local.yaml.
+### Add the example configuration snippet below to your app-config.local.yaml.
 
 ```yaml
 dynamicPlugins:
@@ -79,7 +79,7 @@ dynamicPlugins:
                 - isKind: component
 ```
 
-Here is another example configuration featuring some conditionals and customized tabs:
+### Here is another example configuration featuring some conditionals and customized tabs:
 
 ```yaml
 dynamicPlugins:
@@ -163,7 +163,7 @@ dynamicPlugins:
               text: 'Some Content on the Dependencies Page'
 ```
 
-Using a custom mount point on a page from this plugin
+### Using a custom mount point on a page from this plugin
 
 ```yaml
     backstage-plugin-simple-test-components:
@@ -180,7 +180,7 @@ Using a custom mount point on a page from this plugin
               text: 'Content Block in a custom mount point'
 ```
 
-Scaffolder field extension
+### Scaffolder field extension
 
 ```yaml
 dynamicPlugins:
@@ -192,7 +192,7 @@ dynamicPlugins:
 
 ```
 
-Add an entry to the entity page context menu:
+### Add an entry to the entity page context menu:
 
 ```yaml
 dynamicPlugins:
@@ -210,7 +210,7 @@ dynamicPlugins:
               icon: dialogIcon  
 ```
 
-Add a custom sidebar item to the main navigation panel:
+### Add a custom sidebar item to the main navigation panel:
 
 ```yaml
 dynamicPlugins:
