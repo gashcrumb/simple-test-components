@@ -192,6 +192,25 @@ dynamicPlugins:
 
 ```
 
+Add an entry to the entity page context menu:
+
+```yaml
+dynamicPlugins:
+  frontend:
+    backstage-plugin-simple-test-components:
+      appIcons:
+        - name: dialogIcon
+          importName: DialogIcon
+      mountPoints:
+        - mountPoint: entity.context.menu
+          importName: SimpleDialog
+          config:
+            props:
+              title: Open Simple Dialog
+              icon: dialogIcon  
+```
+
+
 ## Run the Showcase App
 
 ```bash

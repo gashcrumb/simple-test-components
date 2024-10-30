@@ -5,9 +5,7 @@ import {
   createRoutableExtension,
 } from "@backstage/core-plugin-api";
 import { scaffolderPlugin } from "@backstage/plugin-scaffolder";
-
 import { Entity } from "@backstage/catalog-model";
-
 import { rootRouteRef } from "./routes";
 import {
   FieldExtensionComponent,
@@ -17,11 +15,14 @@ import {
   SimpleTestField,
   simpleDoNothingValidation,
 } from "./components/SimpleTestField";
-
 import {
   ValidateKebabCase,
   validateKebabCaseValidation,
 } from "./components/ValidateKebabCase/ValidateKebabCase";
+
+import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+
+export const DialogIcon = SettingsSuggestIcon;
 
 export const simpleTestComponentsPlugin = createPlugin({
   id: "simple-test-components",
@@ -47,6 +48,18 @@ export const SimpleTestComponentsPage = simpleTestComponentsPlugin.provide(
     component: {
       lazy: () =>
         import("./components/TestInfoCard").then((m) => m.TestInfoCard),
+    },
+  })
+);
+
+export const SimpleDialog = simpleTestComponentsPlugin.provide(
+  createComponentExtension({
+    name: "SimpleDialog",
+    component: {
+      lazy: () =>
+        import("./components/SimpleDialog/SimpleDialog").then(
+          (m) => m.SimpleDialog
+        ),
     },
   })
 );
