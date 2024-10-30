@@ -210,6 +210,21 @@ dynamicPlugins:
               icon: dialogIcon  
 ```
 
+Add a custom sidebar item to the main navigation panel:
+
+```yaml
+dynamicPlugins:
+  frontend:
+    backstage-plugin-simple-test-components:
+      dynamicRoutes:
+        - importName: CustomSearchPage
+          menuItem:
+            config:
+              props:
+                text: Click Me!
+            importName: SimpleSidebarItem
+          path: /example
+```
 
 ## Run the Showcase App
 

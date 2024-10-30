@@ -6,7 +6,7 @@ import {
   DialogContentText,
   DialogTitle,
 } from "@mui/material";
-import * as React from "react";
+import React from "react";
 
 export type SimpleDialogProps = {
   open: boolean;

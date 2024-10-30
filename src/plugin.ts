@@ -20,7 +20,7 @@ import {
   validateKebabCaseValidation,
 } from "./components/ValidateKebabCase/ValidateKebabCase";
 
-import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 
 export const DialogIcon = SettingsSuggestIcon;
 
@@ -59,6 +59,18 @@ export const SimpleDialog = simpleTestComponentsPlugin.provide(
       lazy: () =>
         import("./components/SimpleDialog/SimpleDialog").then(
           (m) => m.SimpleDialog
+        ),
+    },
+  })
+);
+
+export const SimpleSidebarItem = simpleTestComponentsPlugin.provide(
+  createComponentExtension({
+    name: "SimpleSidebarItem",
+    component: {
+      lazy: () =>
+        import("./components/SimpleSidebarItem/SimpleSidebarItem").then(
+          (m) => m.SimpleSidebarItem
         ),
     },
   })
